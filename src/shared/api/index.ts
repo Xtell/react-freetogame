@@ -1,1 +1,1 @@
-export { getMaxItemID } from "./getMaxItemID";
+export { getGames } from "./getGames";

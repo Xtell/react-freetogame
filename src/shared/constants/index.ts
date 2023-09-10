@@ -1,3 +1,7 @@
-const BASE_URL = "https://hacker-news.firebaseio.com/v0";
+const BASE_URL = "https://free-to-play-games-database.p.rapidapi.com/api";
 
-export { BASE_URL };
+const endpoints = {
+  gameList: "/games",
+};
+
+export { BASE_URL, endpoints };
