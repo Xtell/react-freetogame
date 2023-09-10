@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "outDir": "./build/",
+    "noImplicitAny": true,
+    "module": "CommonJS",
+    "target": "es6",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@shared": [
+        "./shared"
+      ],
+      "@shared/*": [
+        "./shared/*"
+      ],
+      "@ui": [
+        "./shared/ui/*"
+      ],
+      "@pages": [
+        "./pages"
+      ],
+      "@pages/*": [
+        "./pages/*"
+      ]
+    }
+  }
+}
