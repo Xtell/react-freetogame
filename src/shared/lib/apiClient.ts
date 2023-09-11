@@ -1,5 +1,5 @@
-import axios, { AxiosInstance, AxiosRequestConfig, AxiosRequestHeaders, AxiosResponse } from "axios";
-import { BASE_URL } from "@shared/constants";
+import axios, {AxiosInstance, AxiosRequestConfig, AxiosRequestHeaders, AxiosResponse} from "axios";
+import {BASE_URL} from "@shared/constants";
 
 type RequestParams = {
   endpoint: string;
@@ -17,13 +17,14 @@ class ApiInstance {
     "X-RapidAPI-key": process.env.X_RAPIDAPI_KEY!,
     "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
   };
+
   constructor(baseUrl: string) {
     this._axiosInstance = axios.create({
       baseURL: baseUrl,
     });
   }
 
-  async get<T>({ endpoint = "", options = {} }: RequestParams): Promise<T> {
+  async get<T>({endpoint = "", options = {}}: RequestParams): Promise<T> {
     const response: AxiosResponse<T> = await this._axiosInstance.get(endpoint, {
       headers: this._baseHeaders,
       ...options,
@@ -31,7 +32,7 @@ class ApiInstance {
     return response.data;
   }
 
-  async post<T>({ endpoint = "", options = {} }: RequestParams): Promise<T> {
+  async post<T>({endpoint = "", options = {}}: RequestParams): Promise<T> {
     const response: AxiosResponse<T> = await axios.post(endpoint, options);
     return response.data;
   }

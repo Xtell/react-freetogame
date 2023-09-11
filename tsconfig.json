@@ -20,6 +20,12 @@
       "@shared/*": [
         "./shared/*"
       ],
+      "@widgets": [
+        "./widgets"
+      ],
+      "@widgets/*": [
+        "./widgets/*"
+      ],
       "@ui": [
         "./shared/ui/*"
       ],
